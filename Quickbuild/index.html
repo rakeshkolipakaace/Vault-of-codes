@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Cake Recipe</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="recipe-card">
+        <h1>Chocolate Cake</h1>
+        <img class="recipe-image" src="https://www.oogio.net/wp-content/uploads/2018/11/American_chocolate_cake6-s.jpg"
+            alt="Chocolate Cake" />
+
+        <p><strong>Prep Time:</strong> 45 mins</p>
+        <p><strong>Servings:</strong> 6 people</p>
+
+        <button onclick="toggleIngredients()">Show Ingredients</button>
+        <ul id="ingredients" class="hidden">
+            <li>2 cups flour</li>
+            <li>1 cup sugar</li>
+            <li>1 cup cocoa powder</li>
+            <li>2 eggs</li>
+            <li>1/2 cup butter</li>
+        </ul>
+
+        <button onclick="startCooking()">Start Cooking</button>
+        <ul id="steps">
+            <li>Mix dry ingredients.</li>
+            <li>Add eggs and butter.</li>
+            <li>Stir until smooth.</li>
+            <li>Bake for 30 minutes.</li>
+            <li>Let it cool and serve.</li>
+        </ul>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+
+        <button onclick="nextStep()">Next Step</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
