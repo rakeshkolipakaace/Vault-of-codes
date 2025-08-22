@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vaultof Codes Internships</title>
+    <style>
+        body {
+            background: radial-gradient(circle, #FFD6E0 0%, #B1C9FF 100%);
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 40px 0;
+            min-height: 100vh;
+        }
+
+        .title {
+            text-align: center;
+            letter-spacing: 0.02em;
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #3747a5;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 16px #c5cdfa48;
+        }
+
+        .internship-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.4rem 2rem;
+            justify-content: center;
+            margin-bottom: 30px;
+            margin-top: 80px;
+        }
+
+        .internship-card {
+            background: rgba(255, 255, 255, 0.74);
+            border-radius: 23px;
+            box-shadow: 0 12px 36px 0 rgba(55, 71, 165, 0.12), 0 1.5px 4px #e0cfff2c;
+            width: 320px;
+            padding: 32px 22px 24px 22px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: transform 0.22s, box-shadow 0.22s;
+            animation: floatIn 0.5s cubic-bezier(.57, 1.74, .37, .71);
+        }
+
+        @keyframes floatIn {
+            from {
+                opacity: 0;
+                transform: translateY(36px) scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .internship-card:hover {
+            transform: scale(1.045) rotate(-1deg);
+            box-shadow: 0 24px 60px rgba(81, 100, 227, 0.22), 0 1.5px 4px #e0cfff2c;
+        }
+
+        .card-icon {
+            font-size: 2.5em;
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 8px #aab3fd44);
+        }
+
+        .program-title {
+            font-size: 1.28em;
+            font-weight: 600;
+            color: #4569e2;
+            margin-bottom: 10px;
+            letter-spacing: 0.01em;
+            text-align: center;
+        }
+
+        .details-list {
+            font-family: inherit;
+            font-size: 1.08em;
+            color: #594e7f;
+            margin-bottom: 19px;
+            line-height: 1.6;
+            padding-left: 12px;
+        }
+
+        .details-list li {
+            margin-bottom: 7px;
+        }
+
+        .view-btn {
+            display: block;
+            width: 100%;
+            padding: 13px 0;
+            background: linear-gradient(90deg, #6d83f4, #fc5c7d 102%);
+            color: #fff;
+            font-size: 1.11em;
+            font-weight: 600;
+            border-radius: 10px;
+            letter-spacing: 0.06em;
+            text-decoration: none;
+            border: none;
+            text-align: center;
+            box-shadow: 0 2px 18px rgba(252, 92, 125, 0.07);
+            transition: background 0.18s, transform 0.16s;
+        }
+
+        .view-btn:hover {
+            background: linear-gradient(90deg, #fc5c7d 20%, #6d83f4 100%);
+            transform: scale(1.04);
+        }
+
+        @media (max-width: 900px) {
+            .internship-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .internship-card {
+                width: 92vw;
+                max-width: 420px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title"> Vaultof Codes Internships</div>
+    <div class="internship-container">
+        <div class="internship-card">
+            <span class="card-icon">💻</span>
+            <div class="program-title">Web Development Internship</div>
+            <ul class="details-list">
+                <li>Duration: 1 month/2 months</li>
+                <li>Location: Virtual</li>
+                <li>Stipend: -</li>
+                <li>Start date: 05/11/2023</li>
+            </ul>
+            <a href="https://roadmap.sh/full-stack" class="view-btn" target="_blank">View Details</a>
+        </div>
+        <div class="internship-card">
+            <span class="card-icon">📱</span>
+            <div class="program-title">App Development Internship</div>
+            <ul class="details-list">
+                <li>Duration: 1 month/2 months</li>
+                <li>Location: Virtual</li>
+                <li>Stipend: -</li>
+                <li>Start date: 05/11/2023</li>
+            </ul>
+            <a href="https://www.geeksforgeeks.org/flutter/flutter-tutorial/" class="view-btn" target="_blank">View
+                Details</a>
+        </div>
+        <div class="internship-card">
+            <span class="card-icon">🐍</span>
+            <div class="program-title">Python Programming Internship</div>
+            <ul class="details-list">
+                <li>Duration: 1 month/2 months</li>
+                <li>Location: Virtual</li>
+                <li>Stipend: -</li>
+                <li>Start date: 05/11/2023</li>
+            </ul>
+            <a href="https://www.w3schools.com/python/" class="view-btn" target="_blank">View Details</a>
+        </div>
+        <div class="internship-card">
+            <span class="card-icon">☕</span>
+            <div class="program-title">Java Programming Internship</div>
+            <ul class="details-list">
+                <li>Duration: 1 month/2 months</li>
+                <li>Location: Virtual</li>
+                <li>Stipend: -</li>
+                <li>Start date: 05/11/2023</li>
+            </ul>
+            <a href="https://www.w3schools.com/java/" class="view-btn" target="_blank">View Details</a>
+        </div>
+    </div>
+</body>
+
+</html>
