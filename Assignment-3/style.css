@@ -1,0 +1,306 @@
+ body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(120deg, #f857a6 0%, #ffefba 100%);
+            animation: gradientBG 8s ease-in-out infinite alternate;
+            color: #222;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background: linear-gradient(120deg, #f857a6 0%, #ffefba 100%);
+            }
+
+            100% {
+                background: linear-gradient(120deg, #85FFBD 0%, #fffb7d 100%);
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 44px 12px 22px;
+            background: rgba(255, 255, 255, 0.42);
+            box-shadow: 0 6px 18px #eec2c24c;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(6px);
+        }
+
+        header h1 {
+            font-size: 2.7em;
+            background: linear-gradient(45deg, #f857a6 60%, #ff5858 100%);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 1px 4px #f857a636);
+            animation: fadeInDown 1.2s;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-38px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 14px;
+            opacity: 0.87;
+        }
+
+        header small {
+            font-size: 0.98em;
+            color: #f857a6;
+            font-weight: 500;
+        }
+
+        /* Animated Filter Menu */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 18px;
+            animation: fadeIn 1.4s;
+        }
+
+        .filter-btn {
+            background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+            color: #fff;
+            border: none;
+            border-radius: 16px;
+            padding: 9px 19px;
+            font-size: 1em;
+            cursor: pointer;
+            font-weight: 700;
+            box-shadow: 0 2px 10px #f857a636;
+            transition: background 0.18s, transform 0.13s, box-shadow 0.16s;
+            position: relative;
+            outline: none;
+            letter-spacing: 0.02em;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: linear-gradient(93deg, #ff5858 10%, #f857a6 100%);
+            transform: scale(1.12);
+            box-shadow: 0 4px 16px #f857a668;
+        }
+
+        .filter-btn:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2.5px;
+            background: #f857a6;
+            margin: 0 auto;
+            transition: width 0.2s;
+        }
+
+        .filter-btn.active:after {
+            width: 65%;
+        }
+
+        /* Glassmorphism Card with Glow */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 36px 28px;
+            padding: 44px 28px 80px;
+            max-width: 1250px;
+            margin: 0 auto;
+            animation: fadeInUp 1.5s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .portfolio-item {
+            background: rgba(255, 255, 255, 0.74);
+            border-radius: 21px;
+            box-shadow: 0 8px 38px #f857a642, 0 2px 8px #ff585826;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.16s, box-shadow 0.24s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            backdrop-filter: blur(11px);
+            border: 1.7px solid #f857a66b;
+            will-change: transform, box-shadow;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.07) translateY(-6px);
+            box-shadow: 0 22px 56px #f857a662, 0 1.5px 4px #e0cfff2c;
+            border-color: #fff0;
+        }
+
+        .portfolio-thumb {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            background: #ccc;
+            border-bottom: 2px solid #ffe5ec;
+            transition: filter 0.19s, scale 0.19s;
+            filter: brightness(0.96);
+            box-shadow: 0 5px 14px #f857a64a;
+            position: relative;
+        }
+
+        .portfolio-item:hover .portfolio-thumb {
+            filter: brightness(0.9);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(248, 87, 166, 0.3);
+        }
+
+        /* Play overlay */
+        .portfolio-thumb::after {
+            content: '▶';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            font-size: 2.2em;
+            color: #fff;
+            background: rgba(248, 87, 166, 0.73);
+            border-radius: 50%;
+            padding: 7px 19px;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            opacity: 0.0;
+            transition: opacity 0.18s;
+        }
+
+        .portfolio-item:hover .portfolio-thumb::after {
+            opacity: 0.9;
+        }
+
+        .portfolio-title {
+            font-size: 1.19em;
+            font-weight: 700;
+            color: #f857a6;
+            margin: 18px 15px 7px;
+            letter-spacing: 0.03em;
+            opacity: 0.98;
+            text-shadow: 0 2px 8px #f857a626;
+        }
+
+        .portfolio-category {
+            font-size: 1.01em;
+            margin: 0 15px 15px;
+            color: #888;
+            font-style: italic;
+            opacity: 0.81;
+        }
+
+        /* Lightbox styles with fade animation */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(40, 20, 33, 0.93);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 8888;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.18s, opacity 0.33s;
+        }
+
+        .lightbox.active {
+            visibility: visible;
+            opacity: 1;
+            animation: fadeLightbox 0.48s;
+        }
+
+        @keyframes fadeLightbox {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .lightbox video {
+            max-width: 94vw;
+            max-height: 80vh;
+            border-radius: 13px;
+            box-shadow: 0 8px 48px #f857a64f;
+            background: #111;
+            outline: 5px solid #f857a6;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 32px;
+            right: 52px;
+            background: #fff4fa;
+            color: #f857a6;
+            font-size: 2em;
+            border-radius: 40px;
+            padding: 7px 23px;
+            cursor: pointer;
+            border: none;
+            font-weight: 700;
+            box-shadow: 0 2px 8px #f857a676;
+            transition: background 0.2s, color 0.13s;
+            z-index: 9999;
+            opacity: 0.92;
+        }
+
+        .lightbox-close:hover {
+            background: #f857a6;
+            color: #fff;
+            opacity: 1.0;
+        }
+
+        @media (max-width: 750px) {
+            .portfolio {
+                grid-template-columns: 1fr;
+                padding: 22px 6px 48px;
+            }
+
+            header {
+                padding: 30px 6px 18px;
+            }
+
+            .lightbox-close {
+                right: 16px;
+                top: 12px;
+            }
+
+            .filters {
+                gap: 8px;
+            }
+        }
